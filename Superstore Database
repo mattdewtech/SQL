@@ -25,11 +25,15 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
+#Use a SELECT statement to order the items by price.
+
 SELECT * from superstore
 order by price desc;
 
 SELECT SUM(price) from superstore
 order by price;
+
+#Show a statistic about the item prices.
 
 SELECT AVG (price) from superstore
 order by price;
@@ -43,13 +47,9 @@ order by price;
 SELECT COUNT (price) from superstore
 order by price;
 
-SELECT * from superstore
-Where category= 'Kitchen Supplies';
+#Show a statistic about the price for items in the category of "Kitchen Supplies". 
+SELECT avg(price)
 
-SELECT category, 
-COUNT (*)num_items 
-from superstore
-Where category = 'Kitchen Supplies';
-
-SELECT * from superstore
-where category = 'Electronics';
+SELECT avg(price)
+FROM superstore
+WHERE category="Kitchen Supplies";
